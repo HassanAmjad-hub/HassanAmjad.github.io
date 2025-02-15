@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>HASSAN AMJAD</span></a>
+        <a href="Contact-me.html" class="contact">Contact Me</a>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h2 class="main-heading">ABOUT ME</h2>
+            <h1 class="sub-heading"><br>I'm <span>HASSAN</span><br><br>A Data Analyst and A Full Stack Developer</h1>
+            <p>I am a Full Stack Developer and Data Analyst passionate about building scalable applications and extracting insights from data. With expertise in Python,SQL and MATLAB. I have a good knowledge of React,JavaScript,and Node.js, I create interactive web solutions and analyze complex datasets. I enjoy solving real-world problems through data-driven development. My goal is to bridge the gap between technology and analytics to drive impactful solutions. Always eager to learn, I thrive in dynamic and innovative environments</p>
+            <div class="tab-titles"> 
+                <p class="tablinks active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                <p class="tablinks" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <h2><span>Language skills</span></h2>
+                <ul>
+                    <li>English - Fluent</li>
+                    <li>Finnish - Basic</li>
+                    <li>Urdu - <strong>Native</strong></li>
+                </ul>
+                <h2><span>Soft Skills</span></h2>
+                <ul>
+                    <li>Time Management</li>
+                    <li>Communication</li>
+                    <li>Multi-Tasking</li>
+                    <li>Attention to Detail</li>
+                    <li>Team Work</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <h2><span>2024 - Jalone Oy (Data Analyst)</span></h2>
+                <ul>
+                    <li>Adapting a mathematical model to road surface elevation data.</li>
+                    <li>Searching for road profile similarity by applying different techniques.</li>
+                    <li>Writing a data model and unit tests to validate operations.</li>
+                </ul>
+                <h2><span>2022 - 2023 - Sharper Shape (Digitizer)</span></h2>
+                <ul>
+                    <li>Perform quality assurance on lidar, hyperspectral, and RGB imagery data.</li>
+                    <li>Interpretation of aerial data to extract vegetation, infrastructure, and land use.</li>
+                    <li>Analysis of vegetation for inspections, vegetation management, and safety concerns.</li>
+                </ul>
+                <h2><span>2021 - 2022 - Coreorient Oy (Technical Lead)</span></h2>
+                <ul>
+                    <li>RFID Implementation in inventory management systems.</li>
+                    <li>Development and integration of software and hardware solutions.</li>
+                    <li>Maintenance, documentation, and support for technical operations.</li>
+                </ul>
+                <h2><span>2015 - 2021 - Government of Pakistan (Research Officer)</span></h2>
+                <ul>
+                    <li>Handling large spatial data sets and performing spatial analysis.</li>
+                    <li>Interpretation of satellite images and applying change detection techniques.</li>
+                    <li>GIS integration and data visualization for decision-making.</li>
+                </ul>
+                <h2><span>2010 - 2015 - PAKPLC (Electronics Engineer)</span></h2>
+                <ul>
+                    <li>Expertise in analog circuit simulation, digital circuit design, and relay logic.</li>
+                    <li>Experience with microcontroller programming and troubleshooting.</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <h2><span> Institute Of Space Technology  (2013 - 2016)</span></h2>
+                <ul><strong>Master of Science</strong> - Remote Sensing and GIS<br></ul>
+                <h2><span>Ned University of Engineering (2012 - 2015)</span></h2>
+                <ul><strong>Master of Engineering</strong> - Micro Systems<br></ul>    
+                <h2><span>Sir Syed University of Engineering and Technology (2006 - 2010)</span></h2>
+                <ul><strong>Bachelor of Science</strong> - Electronics<br></ul>
+            </div>
+        </div>
+    <div class="img-box">
+        <img src="images/Image.JPG" width="400">
+    </div>
+    </section>
+   
+    <script>
+
+        var tab_links = document.getElementsByClassName("tablinks");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tab_links){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+</body>
+</html>
